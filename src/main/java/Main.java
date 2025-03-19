@@ -27,7 +27,8 @@ public class Main {
         }
         break;
       case 5:
-        trojkat(a, b);
+        float c = scanner.nextFloat();
+        trojkat(a, b, c);
         break;
       default:
         System.out.println("Nieprawidłowa opcja!");
@@ -51,8 +52,12 @@ public class Main {
     System.out.println("Iloraz: " + (a / b));
   }
 
-  static void trojkat(float a, float b) {
-    System.out.println("Sprawdzanie trójkąta prostokątnego...");
-    // Add your triangle calculation logic here
+  static void trojkat(float a, float b, float c) {
+    
+    if ((a * a) + (b * b) == (c * c)) {
+      System.out.println("Trójkąt jest prostokątny");
+    } else {
+      System.out.println("Trójkąt nie jest prostokątny");
+    }
   }
 }
